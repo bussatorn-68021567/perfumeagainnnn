@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า | Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">BODY SCENT</a>
+      <nav class="nav">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h1>สั่งซื้อสินค้า</h1>
+          <hr class="divider">
+          <p>กรอกข้อมูลด้านล่าง แล้วกดยืนยันการสั่งซื้อ</p>
+        </div>
+
+        <form id="orderForm">
+          <label for="customerName">ชื่อลูกค้า</label>
+          <input type="text" id="customerName" name="customerName" required>
+
+          <label for="contact">เบอร์โทร / Line</label>
+          <input type="text" id="contact" name="contact" required>
+
+          <label for="items">รายการสินค้า</label>
+          <input type="text" id="items" name="items" readonly>
+
+          <label for="total">จำนวนเงินรวม (บาท)</label>
+          <input type="text" id="total" name="total" readonly>
+
+          <label for="note">หมายเหตุ</label>
+          <textarea id="note" name="note"></textarea>
+
+          <button type="submit" class="btn btn--solid">ยืนยันสั่งซื้อ</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

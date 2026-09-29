@@ -1,0 +1,553 @@
+/* ==========================================================
+   Body Scent — shared theme (premium · elegant · minimal)
+   ใช้ร่วมกันทุกหน้า
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap");
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* base: white – cream – deep beige */
+  --white: #fdfcfa;
+  --cream: #f6f1e9;
+  --sand: #e8dfd0;
+  --beige-deep: #6b5d4d;
+  --ink: #2f2a25;
+
+  /* accent: soft gold / bronze */
+  --gold: #b49a6b;
+  --gold-deep: #96794a;
+
+  /* borders */
+  --line: rgba(47, 42, 37, 0.22);
+  --line-soft: rgba(47, 42, 37, 0.12);
+
+  /* mood colors — small touches only */
+  --mood-fresh: #3f5f4a;
+  --mood-sweet: #8a6fa8;
+  --mood-confident: #47566b;
+  --mood-romance: #c47a7a;
+
+  /* type */
+  --font-display: "Cormorant Garamond", "Noto Serif Thai", Georgia, serif;
+  --font-body: "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
+  --font-serif-th: "Noto Serif Thai", "Cormorant Garamond", Georgia, serif;
+
+  /* spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 7rem;
+
+  --radius: 2px;
+  --container: 1120px;
+}
+
+/* ---------- Reset & base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--gold-deep);
+  outline-offset: 4px;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 var(--space-2);
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  margin: 0 0 var(--space-2);
+  color: var(--beige-deep);
+}
+
+.lead {
+  font-family: var(--font-serif-th);
+  font-weight: 300;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: min(100% - 3rem, var(--container));
+  margin-inline: auto;
+}
+
+section,
+.section {
+  padding-block: var(--space-6);
+}
+
+.section--cream {
+  background: var(--cream);
+}
+
+.section-head {
+  max-width: 34rem;
+  margin: 0 auto var(--space-5);
+  text-align: center;
+}
+
+.divider {
+  width: 3rem;
+  height: 1px;
+  background: var(--gold);
+  border: 0;
+  margin: var(--space-3) auto;
+}
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(253, 252, 250, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.nav a {
+  padding-block: 0.25rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--gold-deep);
+  border-bottom-color: var(--gold);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.25rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+.btn--solid {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+.btn--solid:hover {
+  background: var(--gold-deep);
+  border-color: var(--gold-deep);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--space-6);
+  background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.hero .container {
+  max-width: 46rem;
+}
+
+.hero p {
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- Mood cards ---------- */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.mood-card {
+  --mood: var(--gold);
+  display: block;
+  padding: var(--space-4) var(--space-3);
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease;
+}
+
+.mood-card:hover {
+  border-color: var(--line);
+}
+
+.mood-card h3 {
+  margin-bottom: var(--space-1);
+}
+
+.mood-card h3::after,
+.product-card h3::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  margin-top: var(--space-1);
+  background: var(--mood);
+}
+
+.mood-card p {
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* mood colors: จุดเล็กๆ เท่านั้น ไม่ใช้เป็นพื้นหลังการ์ด */
+[data-mood="fresh"],
+.mood-fresh {
+  --mood: var(--mood-fresh);
+}
+[data-mood="sweet"],
+.mood-sweet {
+  --mood: var(--mood-sweet);
+}
+[data-mood="confident"],
+.mood-confident {
+  --mood: var(--mood-confident);
+}
+[data-mood="romance"],
+.mood-romance {
+  --mood: var(--mood-romance);
+}
+
+.mood-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--mood, var(--gold));
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ---------- Filter bar ---------- */
+#filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1) var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+#filter-bar button,
+.filter-btn {
+  --mood: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--beige-deep);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0.35rem 0.15rem;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#filter-bar button:hover,
+#filter-bar button.active,
+.filter-btn.active {
+  color: var(--ink);
+  border-bottom-color: var(--mood);
+}
+
+/* ---------- Product grid ---------- */
+#product-list,
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-4) var(--space-3);
+}
+
+.product-card {
+  --mood: var(--gold);
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: var(--line);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--cream);
+}
+
+.product-card .body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-3);
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.product-card .meta {
+  font-size: 0.8rem;
+  color: var(--beige-deep);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gold-deep);
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Forms (order page) ---------- */
+form {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: 0.9rem;
+  color: var(--beige-deep);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--gold-deep);
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+input[readonly] {
+  background: var(--cream);
+}
+
+.order-summary {
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  background: var(--cream);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+}
+
+/* ---------- Table (admin page) ---------- */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th,
+td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+
+th {
+  font-family: var(--font-serif-th);
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--cream);
+  white-space: nowrap;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding-block: var(--space-5);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--beige-deep);
+  border-top: 1px solid var(--line-soft);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --space-5: 3rem;
+    --space-6: 4.5rem;
+  }
+
+  .container {
+    width: min(100% - 2rem, var(--container));
+  }
+
+  .nav {
+    gap: var(--space-3);
+    font-size: 0.85rem;
+  }
+
+  .mood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #product-list,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  th,
+  td {
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

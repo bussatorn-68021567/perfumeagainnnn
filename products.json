@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "น้ำหอมฉีดตัว Fresh เล็ก 30ml",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/fresh.jpg",
+    "description": "ขวดจิ๋วกลิ่นสดชื่นโปร่งเบา ลองง่าย พกสะดวก"
+  },
+  {
+    "id": 2,
+    "name": "น้ำหอมฉีดตัว Fresh ใหญ่ 100ml",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/fresh.jpg",
+    "description": "กลิ่นสดชื่นเบาสบายแบบจุใจ ฉีดได้ทุกวันไม่ต้องกลัวหมด"
+  },
+  {
+    "id": 3,
+    "name": "น้ำหอมฉีดตัว Sweet เล็ก 30ml",
+    "mood": "sweet",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/sweet.jpg",
+    "description": "ขวดเล็กน่ารักกลิ่นหวานละมุน ใส่กระเป๋าไปได้ทุกที่"
+  },
+  {
+    "id": 4,
+    "name": "น้ำหอมฉีดตัว Sweet ใหญ่ 100ml",
+    "mood": "sweet",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/sweet.jpg",
+    "description": "หวานละมุนอบอุ่น ให้ใจฟูตลอดวันในขวดใหญ่สุดคุ้ม"
+  },
+  {
+    "id": 5,
+    "name": "น้ำหอมฉีดตัว Confident เล็ก 30ml",
+    "mood": "confident",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/confident.jpg",
+    "description": "ลองกลิ่นสะอาดนิ่งๆ ดูดีในขวดเล็ก ก่อนตกหลุมรักขวดใหญ่"
+  },
+  {
+    "id": 6,
+    "name": "น้ำหอมฉีดตัว Confident ใหญ่ 100ml",
+    "mood": "confident",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/confident.jpg",
+    "description": "กลิ่นสะอาดดูดี มั่นใจทุกวัน จัดเต็มแบบขวดใหญ่"
+  },
+  {
+    "id": 7,
+    "name": "น้ำหอมฉีดตัว Romance เล็ก 30ml",
+    "mood": "romance",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/romance.jpg",
+    "description": "ขวดจิ๋วกลิ่นหวานมีเสน่ห์ ให้ได้ลองสัมผัสความน่าหลงใหล"
+  },
+  {
+    "id": 8,
+    "name": "น้ำหอมฉีดตัว Romance ใหญ่ 100ml",
+    "mood": "romance",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/romance.jpg",
+    "description": "หวานลึกมีเสน่ห์ ติดตรึงใจ พร้อมทุกโมเมนต์พิเศษ"
+  },
+  {
+    "id": 9,
+    "name": "โรลออน Fresh",
+    "mood": "fresh",
+    "type": "rollon",
+    "size": null,
+    "price": 149,
+    "image": "images/fresh.jpg",
+    "description": "ทาปุ๊บสดชื่นปั๊บ พกง่ายในกระเป๋าใบเล็ก"
+  },
+  {
+    "id": 10,
+    "name": "โรลออน Sweet",
+    "mood": "sweet",
+    "type": "rollon",
+    "size": null,
+    "price": 149,
+    "image": "images/sweet.jpg",
+    "description": "ทาแล้วหอมหวานละมุน เติมความอบอุ่นให้ตัวเองได้ทุกเมื่อ"
+  }
+]
